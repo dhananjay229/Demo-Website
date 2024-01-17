@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>my website</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media-query.css">
 </head>
 <body>
     
@@ -19,7 +20,7 @@
             <a href="#" class="company-logo">
                 <img src="./assets/asset 1.png" alt="company-logo">
             </a>
-            <div class="nav-links">
+            <div class="nav-links" id="nav-links">
                 <ul class="flex">
                     <li><a href="#" class="hover-link">Products</a></li>
                     <li><a href="#" class="hover-link">Customer</a></li>
@@ -29,6 +30,9 @@
                     <li><a href="#" class="hover-link primary-button">Sign up</a></li>
                 </ul>
             </div>
+            <a href="#" class="nav-toggle hover-link" id="toggle">
+                <i class="fa-solid fa-bars"></i>
+            </a>
         </div>
     </nav>
 
@@ -131,7 +135,7 @@
             </div>
         </div>
     </div>
-    <div class="big-feature-section">
+    <!-- <div class="big-feature-section">
         <div class="container flex big-featurs-container">
             <div class="feature-desc flex">
                 <h4>Effortless Validation for</h4>
@@ -142,7 +146,7 @@
                 <img src="./assets/asset 21.png" alt="">
             </div>
         </div>
-    </div>
+    </div> -->
     <div class="big-feature-section">
         <div class="container flex big-featurs-container">
             <div class="feature-img">
@@ -222,6 +226,16 @@
         </div>
     </div>
 
+    <script src="https://kit.fontawesome.com/c1fc3d2826.js" crossorigin=""></script>
+
+    <script>
+        const toggleButton = document.getElementById('toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        toggleButton.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        })
+    </script>
 <!-- <div class="spacer" style="height: 50vh"></div> -->
 </body>
 </html>
